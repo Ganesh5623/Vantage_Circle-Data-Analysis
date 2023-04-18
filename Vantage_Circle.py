@@ -5,7 +5,7 @@ import pandas as pd
 
 
 
-import openpyxl
+
 
 # File uploader
 uploaded_file = st.file_uploader("C:/Users/ADMIN/Downloads/data_analysis.xlsx", type=["xlsx"])
