@@ -11,7 +11,7 @@ import pandas as pd
 
 import streamlit as st
 
-df=pd.read_excel("https://drive.google.com/file/d/1OEtcw-7ZiOAVI_HIFtSp1jOEWE52oY-_/view?usp=sharing")
+df=pd.read_excel("C:\Users\ADMIN\Downloads\data_analysis12.xlsx")
 
 st.title("Data Exploration and Data Analysis")
 
