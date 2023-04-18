@@ -1,19 +1,24 @@
 #!/usr/bin/env python
 # coding: utf-8
+import streamlit as st
+import pandas as pd
 
-# In[1]:
+# File uploader
+uploaded_file = st.file_uploader("C:/Users/ADMIN/Downloads/data_analysis.xlsx", type=["xlsx"])
+
+# Load Excel file into a pandas DataFrame
+if uploaded_file is not None:
+    df_sender = pd.read_excel(uploaded_file, sheet_name='sender')
+    df_receiver = pd.read_excel(uploaded_file, sheet_name='receiver')
+    df_manager = pd.read_excel(uploaded_file, sheet_name='manager')
+
+
+
+
 
 
 import pandas as pd
-# Replace 'file_path.xlsx' with the actual path of your Excel file
 
-###df_manager = pd.read_excel('data_analysis.xlsx',sheet_name='manager')
-
-import streamlit as st
-# Replace 'file_path.xlsx' with the actual path of your Excel file
-df_sender = pd.read_excel('C:/Users/ADMIN/Downloads/data_analysis.xlsx',sheet_name='sender')
-df_receiver = pd.read_excel('C:/Users/ADMIN/Downloads/data_analysis.xlsx',sheet_name='receiver')
-df_manager = pd.read_excel('C:/Users/ADMIN/Downloads/data_analysis.xlsx',sheet_name='manager')
 import pandas as pd
 
 # Assuming you have three dataframes named df1, df2, and df3
