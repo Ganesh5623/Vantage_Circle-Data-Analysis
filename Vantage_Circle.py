@@ -2,6 +2,8 @@
 # coding: utf-8
 import streamlit as st
 import pandas as pd
+pip install openpyxl
+
 import openpyxl
 
 # File uploader
