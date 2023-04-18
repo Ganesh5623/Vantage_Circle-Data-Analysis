@@ -11,7 +11,7 @@ import pandas as pd
 
 import streamlit as st
 
-df=pd.read_excel("C:/Users/ADMIN/Downloads/data_analysis12.xlsx")
+df=pd.read_csv("https://github.com/Ganesh5623/Vantage_Circle-Data-Analysis/blob/main/data_analysis123.csv")
 
 st.title("Data Exploration and Data Analysis")
 
