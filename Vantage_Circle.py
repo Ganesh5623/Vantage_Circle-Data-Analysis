@@ -10,8 +10,27 @@ import pandas as pd
 ###df_manager = pd.read_excel('data_analysis.xlsx',sheet_name='manager')
 
 import streamlit as st
+# Replace 'file_path.xlsx' with the actual path of your Excel file
+df_sender = pd.read_excel('C:/Users/ADMIN/Downloads/data_analysis.xlsx',sheet_name='sender')
+df_receiver = pd.read_excel('C:/Users/ADMIN/Downloads/data_analysis.xlsx',sheet_name='receiver')
+df_manager = pd.read_excel('C:/Users/ADMIN/Downloads/data_analysis.xlsx',sheet_name='manager')
+import pandas as pd
 
-df=pd.read_csv("https://github.com/Ganesh5623/Vantage_Circle-Data-Analysis/blob/main/data_analysis123.csv")
+# Assuming you have three dataframes named df1, df2, and df3
+
+# Concatenate the dataframes vertically along rows
+df = pd.concat([df_sender,df_receiver,df_manager], axis=1)
+
+# Reset the index of the concatenated dataframe
+df.reset_index(drop=True, inplace=True)
+import pandas as pd
+
+# Assuming you have a dataframe named df with duplicate columns
+
+# Drop duplicate columns
+df = df.loc[:,~df.columns.duplicated()]
+
+
 
 st.title("Data Exploration and Data Analysis")
 
